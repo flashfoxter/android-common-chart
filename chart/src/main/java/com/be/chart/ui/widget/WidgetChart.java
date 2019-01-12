@@ -8,7 +8,12 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 
+import com.be.chart.Format;
+import com.be.chart.R;
+import com.be.chart.charts.PriceSeries;
 import com.be.ui.widget.BaseWidget;
+import com.be.chart.databinding.WidgetChartBinding;
+
 import com.scichart.charting.model.AnnotationCollection;
 import com.scichart.charting.model.dataSeries.IXyDataSeries;
 import com.scichart.charting.numerics.labelProviders.ILabelProvider;
@@ -30,10 +35,6 @@ import com.scichart.extensions.builders.SciChartBuilder;
 import java.util.Collections;
 import java.util.Date;
 
-import element.business.charts.PriceSeries;
-import element.business.charts.R;
-import element.business.charts.databinding.WidgetChartBinding;
-import element.business.helpers.Format;
 import lombok.Getter;
 
 public class WidgetChart extends BaseWidget {

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/container_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <!--android:background="?backNormalColor"-->
+
+                <LinearLayout
+                    android:id="@+id/container_period_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal" />
+
+                <com.scichart.charting.visuals.SciChartSurface
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/container_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="36dp"
+                android:visibility="gone">
+                <!--android:background="?backNormalColor"-->
+
+                <TextView
+                    android:id="@+id/no_chart_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <!--
+                android:text="@string/no_chart_data"
+                android:textColor="?attr/activeTextColor"
+            -->
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

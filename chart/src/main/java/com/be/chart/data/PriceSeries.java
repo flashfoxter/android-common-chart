@@ -1,10 +1,10 @@
 package com.be.chart.data;
 
+import com.be.chart.charts.PriceBar;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import element.business.charts.PriceBar;
 
 public class PriceSeries extends ArrayList<PriceBar> {
 
