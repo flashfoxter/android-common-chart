@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initLicense();
     }
 
     @Override
@@ -47,13 +48,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void initExample() {
-        initLicense();
         PriceSeries priceSeries = DataManager.getInstance().getPriceDataIndu(this);
         int size = priceSeries.size();
         sciChartSurface = findViewById(R.id.wt_chart);
         SciChartBuilder.init(sciChartSurface.getContext());
         sciChartBuilder = SciChartBuilder.instance();
-        SciChartBuilder sciChartBuilder = SciChartBuilder.instance();
+        sciChartBuilder = SciChartBuilder.instance();
         final IAxis xAxis = sciChartBuilder.newCategoryDateAxis().withVisibleRange(size - 30, size).withGrowBy(0, 0.1).build();
         final IAxis yAxis = sciChartBuilder.newNumericAxis().withGrowBy(0d, 0.1d).withAutoRangeMode(AutoRange.Always).build();
         IOhlcDataSeries<Date, Double> dataSeries = new OhlcDataSeries<>(Date.class, Double.class);
